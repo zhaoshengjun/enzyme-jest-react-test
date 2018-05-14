@@ -7,12 +7,8 @@ import Adapter from "enzyme-adapter-react-16";
 configure({ adapter: new Adapter() });
 
 describe("<App />", () => {
-  it("should render 1 p element", () => {
+  it("should has a h1 with text 'Welcome to React'", () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find(".App-intro").exists()).toBe(true);
-  });
-  it("should render 3 li elements", () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.find("ul").hasClass("tylor")).toBe(true);
+    expect(wrapper.find("h1").text()).toBe("Welcome to React");
   });
 });
