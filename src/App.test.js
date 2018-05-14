@@ -11,4 +11,8 @@ describe("<App />", () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find(".App-intro").exists()).toBe(true);
   });
+  it("should render 3 li elements", () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find("ul").children().length).toBe(3);
+  });
 });
