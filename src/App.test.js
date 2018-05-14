@@ -13,6 +13,6 @@ describe("<App />", () => {
   });
   it("should render 3 li elements", () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find("ul").children().length).toBe(3);
+    expect(wrapper.find("ul").hasClass("tylor")).toBe(true);
   });
 });
