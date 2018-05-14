@@ -9,6 +9,6 @@ configure({ adapter: new Adapter() });
 describe("<App />", () => {
   it("should render 1 p element", () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find("p").length).toBe(1);
+    expect(wrapper.find(".App-intro").exists()).toBe(true);
   });
 });
